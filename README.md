@@ -1,5 +1,31 @@
-# rottexpr
+Welcome to EDGEROTT!
+---------------------
+* Fork of [rottexpr](https://github.com/LTCHIPS/rottexpr "rottexpr") to further integrate and enhance ROTT backend support into [EDGE](https://github.com/3dfxdev/EDGE "EDGE").
 
+![](https://a.fsdn.com/con/app/proj/edge2/screenshots/edgelogo6.png)
+## Port of rottexpr to EDGE
+
+#### EDGE is an advanced OpenGL source port spawned from the DOOM engine, with focus on easy development and expansion for modders and end-users.
+
+# (C) 1999-2021 The EDGE Team & [Contributors](https://github.com/3dfxdev/hyper3DGE/blob/master/AUTHORS.md)
+# (C) 2021 LTCHIPS and the rottexpr Team
+##### Uses GPL-licensed technology from id Tech 1-4 (C) 1997-2011 id Software, LLC
+##### Uses GPL-licensed technology from Rise of the Triad (C) 1995-2002 Apogee Software
+##### DOSDoom originally developed by Chi Hoang and the DOSDoom Team, (C) 1997-1999
+#### All code licensed under the [GPLv2 (or greater)](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+# See our EDGE Wiki (http://3dfxdev.net/edgewiki/index.php/Main_Page)
+
+# Support
+* Visit the [EDGE forums](http://tdgmods.net/smf) and get involved with the
+community and the various projects for the engine.
+* The [EDGEWiki](http://3dfxdev.net/edgewiki) is also a great resource for
+editing documentation and other information related to the engine.
+
+(C) 1999 - 2021 [Isotope SoftWorks](https://www.facebook.com/IsotopeSoftWorks/) and Contributors (The EDGE Team). All Rights Reserved.
+
+---
+
+# rottexpr Readme
 Based off of the icculus Rise of the Triad source port
 (can be found here: https://icculus.org/rott/)
 
