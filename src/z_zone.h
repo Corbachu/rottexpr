@@ -1,77 +1,105 @@
-/*
-Copyright (C) 1994-1995  Apogee Software, Ltd.
-Copyright (C) 2002-2015  icculus.org, GNU/Linux port
-Copyright (C) 2017-2018  Steven LeVesque
-
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-//***************************************************************************
+//----------------------------------------------------------------------------
+//  EDGE2 Zone Memory Allocation Code 
+//----------------------------------------------------------------------------
+// 
+//  Copyright (c) 1999-2008  The EDGE2 Team.
+// 
+//  This program is free software; you can redistribute it and/or
+//  modify it under the terms of the GNU General Public License
+//  as published by the Free Software Foundation; either version 2
+//  of the License, or (at your option) any later version.
 //
-//    Z_Zone Memory management Constants
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
 //
-//***************************************************************************
-
-
-#ifndef _z_zone_public
-#define _z_zone_public
-
-
-extern int lowmemory;
-
-// tags < 100 are not overwritten until freed
-#define PU_STATIC               1                       // static entire execution time
-#define PU_GAME                 20                      // static until game completed
-#define PU_LEVELSTRUCT          49                      // start of static until level exited
-#define PU_LEVEL                50                      // start of static until level exited
-#define PU_LEVELEND             51                      // end of static until level exited
-
-// tags >= 100 are purgable whenever needed
-#define PU_PURGELEVEL           100
-#define PU_CACHE                101
-#define PU_CACHEWALLS           155
-#define PU_CACHESPRITES         154
-#define PU_CACHEBJWEAP          153
-#define PU_CACHEACTORS          152
-#define PU_CACHESOUNDS          120
-#define PU_FLAT                 102
-#define PU_PATCH                103
-#define PU_TEXTURE              104
-
-#define URGENTLEVELSTART PU_LEVEL
-
-//***************************************************************************
+//----------------------------------------------------------------------------
 //
-//    Z_ZONE.C - Carmack's Memory manager for protected mode
+//  Based on the DOOM source code, released by Id Software under the
+//  following copyright:
 //
-//***************************************************************************
+//    Copyright (C) 1993-1996 by id Software, Inc.
+//
+//----------------------------------------------------------------------------
 
-extern int zonememorystarted;
+#ifndef __Z_ZONE__
+#define __Z_ZONE__
 
-void Z_Init (int size, int min);                // Starts up Memory manager (size is in bytes), (min is minimum requirement)
-void Z_Free (void *ptr);                        // Free a pointer in Z_Zone's domain
-void *Z_Malloc (int size, int tag, void *user); // Malloc You can pass a NULL user if the tag is < PU_PURGELEVEL
-void *Z_LevelMalloc (int size, int tag, void *user); // Level Malloc for level structures
-void Z_FreeTags (int lowtag, int hightag);      // Free a series of memory tags
-void Z_DumpHeap (int lowtag, int hightag);      // Dump the heap (for debugging purposes)
-void Z_CheckHeap (void);                        // Check the heap for corruption
-void Z_ChangeTag (void *ptr, int tag);          // Change the tag of a memory item
-int Z_HeapSize ( void );                        // Return the total heap size
-int Z_UsedHeap ( void );                        // Return used portion of heap size
-int Z_AvailHeap ( void );                       // Returns largest available contiguous block
-int Z_UsedStaticHeap ( void );                  // Returns amount of heap which is static ( < PURGELEVEL )
-void Z_ShutDown( void );
-int Z_GetSize (void *ptr);
-int Z_UsedLevelHeap ( void );
-void Z_Realloc (void ** ptr, int newsize);
+#define ZONEID  0x1d4a11f1
 
-#endif
+typedef enum
+{
+	Z_UrgencyNone    = 0,
+	Z_UrgencyLow     = 1,
+	Z_UrgencyMedium  = 2,
+	Z_UrgencyHigh    = 3,
+	Z_UrgencyExtreme = 4
+}
+z_urgency_e;
+
+// A cache flusher is a function that can find and free unused memory.
+typedef void cache_flusher_f(z_urgency_e urge);
+
+// Generic helper functions.
+char *Z_StrDup(const char *s);
+
+// Memory handling functions.
+void Z_RegisterCacheFlusher(cache_flusher_f *f);
+void Z_Init(void);
+void *Z_Malloc2(int size);
+void *Z_ReMalloc2(void *ptr, int size);
+void Z_Free(void *ptr);
+
+#define Z_Malloc Z_Malloc2
+#define Z_ReMalloc Z_ReMalloc2
+
+//
+// Z_New
+//
+// Allocates num elements of type. Use this instead of Z_Malloc whenever
+// possible.
+//
+#define Z_New(type, num) ((type *) Z_Malloc((num) * sizeof(type)))
+
+//
+// Z_Resize
+//
+// Reallocates a block. Use instead of Z_ReMalloc wherever possible.
+// Unlike normal Z_ReMalloc, the pointer parameter is assigned the new
+// value, and there is no return value.
+//
+#define Z_Resize(ptr,type,n)  \
+	(void)((ptr) = (type *) Z_ReMalloc((void *)(ptr), (n) * sizeof(type)))
+
+//
+// Z_Clear
+//
+// Clears memory to zero.
+//
+#define Z_Clear(ptr, type, num)  \
+	memset((void *)(ptr), ((ptr) - ((type *)(ptr))), (num) * sizeof(type))
+
+//
+// Z_MoveData
+//
+// moves data from src to dest.
+//
+#define Z_MoveData(dest, src, type, num)  \
+	memmove((void *)(dest), (void *)(src), (num) * sizeof(type) + ((src) - (type *)(src)) + ((dest) - (type *)(dest)))
+
+//
+// Z_StrNCpy
+//
+// Copies up to max characters of src into dest, and then applies a
+// terminating zero (so dest must hold at least max+1 characters).
+// The terminating zero is always applied (there is no reason not to)
+//
+#define Z_StrNCpy(dest, src, max) \
+	(void)(strncpy((dest), (src), (max)), (dest)[(max)] = 0)
+
+
+#endif  /* __Z_ZONE__ */
+
+//--- editor settings ---
+// vi:ts=4:sw=4:noexpandtab
