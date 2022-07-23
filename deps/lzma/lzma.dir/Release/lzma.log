@@ -1,0 +1,23 @@
+﻿  Building Custom Rule C:/EDGE/deps/lzma/CMakeLists.txt
+  7zArcIn.c
+  7zBuf.c
+  7zCrc.c
+  7zCrcOpt.c
+  7zDec.c
+  7zStream.c
+  Bcj2.c
+  Bra.c
+  Bra86.c
+  BraIA64.c
+  CpuArch.c
+  Delta.c
+  LzFind.c
+  Lzma2Dec.c
+  LzmaDec.c
+  LzmaEnc.c
+  Ppmd7.c
+  Ppmd7Dec.c
+  LzFindMt.c
+  Threads.c
+  Generating Code...
+  lzma.vcxproj -> C:\EDGE\deps\lzma\Release\lzma.lib

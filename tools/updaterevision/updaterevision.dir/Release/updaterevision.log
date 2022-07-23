@@ -1,0 +1,6 @@
+﻿  Building Custom Rule C:/EDGE/tools/updaterevision/CMakeLists.txt
+  updaterevision.c
+C:\EDGE\tools\updaterevision\updaterevision.c(9,1): warning C4005: '_CRT_SECURE_NO_DEPRECATE': macro redefinition
+C:\EDGE\tools\updaterevision\updaterevision.c : message : see previous definition of '_CRT_SECURE_NO_DEPRECATE'
+  updaterevision.vcxproj -> C:\EDGE\tools\updaterevision\Release\updaterevision.exe
+  	Embedding trustinfo into updaterevision

@@ -1,0 +1,10 @@
+^C:\EDGE\TOOLS\UPDATEREVISION\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/EDGE -BC:/EDGE --check-stamp-file C:/EDGE/tools/updaterevision/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

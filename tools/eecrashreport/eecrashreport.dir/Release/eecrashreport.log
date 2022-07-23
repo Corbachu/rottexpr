@@ -1,0 +1,8 @@
+﻿  Building Custom Rule C:/EDGE/tools/eecrashreport/CMakeLists.txt
+  StdAfx.cc
+  eecrashreport.cc
+  eecrashreportDlg.cc
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  eecrashreport.vcxproj -> C:\EDGE\tools\eecrashreport\Release\eecrashreport.exe

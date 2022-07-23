@@ -1,0 +1,32 @@
+^C:\EDGE\CMAKEFILES\58FA8F20B600DDD3D6D8512C755DFF02\EDGE.EPK.RULE
+setlocal
+..\zipdir\Release\zipdir.exe -udf C:/EDGE/edge.epk C:/EDGE/wadsrc/static
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/EDGE/edge.epk C:/EDGE/Release/edge.epk
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\EDGE\CMAKEFILES\54BB9CBE456E1C0815D58E878791F0BA\EDGE_EPK.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/EDGE/zipdir/Release/zipdir.exe
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\EDGE\WADSRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/EDGE -BC:/EDGE --check-stamp-file C:/EDGE/wadsrc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

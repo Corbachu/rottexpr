@@ -1,0 +1,591 @@
+cmake_minimum_required(VERSION 3.2.2)
+################################################################################
+################################################################################
+## Copyright (c) 1997-2020 The EDGE Team (see AUTHORS.md)
+##
+## This software is free software; you can redistribute it and/or
+## modify it under the terms of the GNU General Public License as published by
+## the Free Software Foundation; either version 2 of the License, or
+## (at your option) any later version.
+##
+## This software is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+##
+## You should have received a copy of the GNU General Public License
+## along with this program; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin St, Fifth Floor,
+## Boston, MA  02110-1301  USA
+##
+################################################################################
+######################### CMake Configuration ##################################
+
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+  if(DEFINED ENV{VITASDK})
+    set(CMAKE_TOOLCHAIN_FILE "$ENV{VITASDK}/share/vita.toolchain.cmake" CACHE PATH "toolchain file")
+	message(STATUS "VitaSDK found! Configuring to use VitaSDK")
+  else()
+    message(STATUS "Please define VITASDK to point to your SDK path if you want to build for VITA!")
+  endif()
+  if(DEFINED ENV{VCPKG_ROOT})
+	 set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+     CACHE STRING "")
+  else()
+	message(STATUS "Please define VCPKG_ROOT to point to your cmake script if you want to use VCPKG!")
+  endif()
+endif()
+
+project(EDGE)
+if(VITA)
+	include("${VITASDK}/share/vita.cmake" REQUIRED)
+	set(VITA_APP_NAME "vitaEDGE")
+	set(VITA_TITLEID  "VSDK00017")
+	set(VITA_VERSION  "01.00")
+endif()
+
+if( COMMAND cmake_policy )
+	if( POLICY CMP0011 )
+		cmake_policy( SET CMP0011 NEW )
+	endif()
+	if( POLICY CMP0054 )
+		cmake_policy( SET CMP0054 NEW )
+	endif()
+endif()
+
+IF (${CMAKE_BINARY_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
+        MESSAGE( FATAL_ERROR "In-tree Builds are NOT supported.")
+ENDIF (${CMAKE_BINARY_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
+
+list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
+include( FindPackageHandleStandardArgs )
+
+macro( make_release_only )
+	set( CMAKE_C_FLAGS_MINSIZEREL ${CMAKE_C_FLAGS_RELEASE} )
+	set( CMAKE_C_FLAGS_RELWITHDEBINFO ${CMAKE_C_FLAGS_RELEASE} )
+	string( REPLACE "/MT " "/MTd " CMAKE_C_FLAGS_DEBUG ${CMAKE_C_FLAGS_RELEASE} )
+	set( CMAKE_CXX_FLAGS_MINSIZEREL ${CMAKE_CXX_FLAGS_RELEASE} )
+	set( CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELEASE} )
+	string( REPLACE "/MT " "/MTd " CMAKE_CXX_FLAGS_DEBUG ${CMAKE_CXX_FLAGS_RELEASE} )
+endmacro()
+
+set( LZMA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/deps/lzma/C" )
+option(FORCE_STATIC_MSVC_LIBS "Use pre-build via ./libs" OFF)
+option(FORCE_INTERNAL_ZLIB "Use internal zlib")
+option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
+option(FORCE_INTERNAL_PHYSFS "Use internal physfs")
+option(HYPERTENSION "Compile Hypertension Executable" OFF)
+
+find_package( ZLIB )
+find_package( BZip2 )
+find_package ( PhysFS )
+find_package(SDL2 REQUIRED)
+find_package(SDL2_MIXER REQUIRED)
+find_package(Ogg CONFIG REQUIRED)
+find_package(Vorbis REQUIRED)
+#find_package ( libdumb )
+
+#find_package ( FFMPEG )
+#find_package ( SDLKitchensink )
+#set (SDL_kitchensink_static "Statically link SDLKitchensink" ON)
+#set (SDL_kitchensink "Do not Statically link SDLKitchensink" OFF)
+
+if(NOT SDL2_MIXER_FOUND OR INTERNAL_SDL2_MIXER)
+	message(STATUS "Using internal SDL2-MIXER")
+	set(SDL2_MIXER_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/deps/SDL_Mixer/include)
+	add_subdirectory(deps/SDL_Mixer)
+	set(SDL2_MIXER_LIBRARIES sdl_mixer)
+	set(SDL2_MIXER_LIBRARY sdl_mixer)
+else()
+	message(STATUS "Using system SDL2_MIXER, includes found at ${SDL2_MIXER_INCLUDE_DIR}")
+endif()
+
+if(NOT ZLIB_FOUND OR INTERNAL_ZLIB)
+	message(STATUS "Using internal zlib")
+	set(ZLIB_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/deps/zlib)
+	add_subdirectory(deps/zlib)
+	set(ZLIB_LIBRARIES ZLIB::ZLIB)
+	set(ZLIB_LIBRARY ZLIB::ZLIB)
+else()
+	message(STATUS "Using system zlib, includes found at ${ZLIB_INCLUDE_DIR}")
+endif()
+
+if( BZIP2_FOUND AND NOT FORCE_INTERNAL_BZIP2 )
+	message( STATUS "Using system bzip2 library, includes found at ${BZIP2_INCLUDE_DIR}" )
+else()
+	message( STATUS "Using internal bzip2 library" )
+	add_subdirectory( deps/bzip2 )
+	set( BZIP2_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/deps/bzip2" )
+	set( BZIP2_LIBRARIES bz2 )
+	set( BZIP2_LIBRARY bz2 )
+endif()
+
+if( PHYSFS_FOUND AND NOT FORCE_INTERNAL_PHYSFS )
+	message( STATUS "Using system physfs library, includes found at ${PHYSFS_INCLUDE_DIR}" )
+else()
+	message( STATUS "Using internal physfs library" )
+	add_subdirectory( deps/physfs )
+	set (PHYSFS_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/deps/physfs/src")
+	set( PHYSFS_LIBRARIES physfs-static )
+	set( PHYSFS_LIBRARY physfs-static )
+endif()
+
+#find_package(FLTK)
+#if(NOT FLTK_FOUND)
+    # if(WIN32)
+        # message("FLTK not found in standard location; looking in ${lookout_dir}/lib/x86")
+        # set(FLTK_LIBRARIES
+            # ${lookout_dir}/lib/x86/fltk.lib
+            # ${lookout_dir}/lib/x86/fltkforms.lib
+            # ${lookout_dir}/lib/x86/fltkgl.lib
+            # ${lookout_dir}/lib/x86/fltkimages.lib
+            # ${lookout_dir}/lib/x86/fltkjpeg.lib
+            # ${lookout_dir}/lib/x86/fltkpng.lib
+            # ${lookout_dir}/lib/x86/fltkzlib.lib
+        # )
+        # set(FLTK_INCLUDE_DIR ${lookout_dir}/include)
+    # endif()
+# endif()
+
+#if( LIBDUMB_FOUND AND NOT FORCE_INTERNAL_LIBDUMB )
+#	message( STATUS "Using system libdumb library, includes found at ${LIBDUMB_INCLUDE_DIR}" )
+#else()
+#	message( STATUS "Using internal libdumb library" )
+#	add_subdirectory( deps/dumb )
+#	set (LIBDUMB_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/deps/dumb/include")
+#	set( LIBDUMB_LIBRARIES dumb )
+#	set( LIBDUMB_LIBRARY dumb )
+#endif()
+
+add_subdirectory( deps/lzma )
+add_subdirectory( zipdir )
+
+if(MSVC)
+	add_definitions(-D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE)
+endif()
+
+# Recursive function to place PK3 archive source files into a hierarchy of source file in the IDE
+function( assort_pk3_source_folder FOLDER_NAME PK3_DIR )
+	# Assort source files into folders in the IDE
+	file(GLOB PK3_SRCS ${PK3_DIR}/*) # Create list of all files in this folder
+	foreach(PK3_SRC ${PK3_SRCS})
+		# If there are subfolders, recurse into them
+		if(IS_DIRECTORY ${PK3_SRC})
+			get_filename_component(DIRNAME ${PK3_SRC} NAME)
+			# Exclude folder from list of source files
+			list(REMOVE_ITEM PK3_SRCS ${PK3_SRC})
+			# Recurse deeper into the filesystem folder tree
+			assort_pk3_source_folder( ${FOLDER_NAME}\\${DIRNAME} ${PK3_SRC} )
+		endif()
+		# Assign IDE group for current top-level source files
+		source_group(${FOLDER_NAME} FILES ${PK3_SRCS})
+	endforeach()
+endfunction()
+
+# Simplify pk3 building, add_pk3(filename srcdirectory)
+function( add_pk3 PK3_NAME PK3_DIR )
+	# message(STATUS "Creating build rule for PK3 ${PK3_NAME} ${PK3_DIR}")
+	# Generate target name. Just use "pk3" for main pk3 target.
+	string( REPLACE "." "_" PK3_TARGET ${PK3_NAME} )
+	if( ${PK3_TARGET} STREQUAL "zdoom_pk3" )
+		set( PK3_TARGET "pk3" )
+	endif()
+
+	add_custom_command( OUTPUT ${CMAKE_BINARY_DIR}/${PK3_NAME}
+		COMMAND zipdir -udf ${CMAKE_BINARY_DIR}/${PK3_NAME} ${PK3_DIR}
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_BINARY_DIR}/${PK3_NAME} $<TARGET_FILE_DIR:EDGE>/${PK3_NAME}
+		DEPENDS zipdir )
+	# Create a list of source files for this PK3, for use in the IDE
+	# Phase 1: Create a list of all source files for this PK3 archive, except
+	#  for a couple of strife image file names that confuse CMake.
+	file(GLOB_RECURSE PK3_SRCS ${PK3_DIR}/*)
+	# Exclude from the source list some gzdoom .png files with brackets in the
+	# file names here, because they confuse CMake.
+	# This only affects the list of source files shown in the IDE.
+	# It does not actually remove the files from the PK3 archive.
+	# First replace that toxic bracket character with something we can handle
+	string(REPLACE "[" confusing_bracket PK3_SRCS "${PK3_SRCS}")
+	string(REPLACE "]" confusing_bracket PK3_SRCS "${PK3_SRCS}")
+	foreach(PK3_SRC ${PK3_SRCS}) # All source files at all levels
+		# Exclude those quarantined source file source file names that once had a bracket
+		if(${PK3_SRC} MATCHES confusing_bracket)
+			# message(STATUS "Ignoring PK3 file name containing brackets "${PK3_SRC})
+			list(REMOVE_ITEM PK3_SRCS ${PK3_SRC})
+		endif()
+	endforeach()
+	# Phase 2: Create the PK3 build rule, including the source file list for the IDE
+	# Touch the zipdir executable here so that the pk3s are forced to
+	# rebuild each time since their dependency has "changed."
+	add_custom_target( ${PK3_TARGET} ALL
+		COMMAND ${CMAKE_COMMAND} -E touch $<TARGET_FILE:zipdir>
+		DEPENDS ${CMAKE_BINARY_DIR}/${PK3_NAME}
+		SOURCES ${PK3_SRCS})
+	# Phase 3: Assign source files to a nice folder structure in the IDE
+	assort_pk3_source_folder("Source Files" ${PK3_DIR})
+	# Phase 4: Add the resulting PK3 to the install target.
+	if( WIN32 )
+		set( INSTALL_PK3_PATH . CACHE STRING "Directory where zdoom.pk3 will be placed during install." )
+	else()
+		set( INSTALL_PK3_PATH share/games/doom CACHE STRING "Directory where zdoom.pk3 will be placed during install." )
+	endif()
+	install(FILES "${PROJECT_BINARY_DIR}/${PK3_NAME}"
+			DESTINATION ${INSTALL_PK3_PATH}
+			COMPONENT "Game resources")
+endfunction()
+
+#add_subdirectory(wadsrc)
+add_subdirectory(data)
+
+add_definitions(-D_CRT_SECURE_NO_WARNINGS=1)
+
+if (MSVC)
+if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+	set( CMAKE_CXX_FLAGS "/MP /GF /Ox /Ob2 /Oi /Ot /GT /W1 ${CMAKE_CXX_FLAGS}" )
+	add_definitions(-DSIMD_X64)
+	add_definitions(-DWIN64)
+	add_definitions(/W1)
+elseif(CMAKE_SIZEOF_VOID_P EQUAL 4)
+	set( CMAKE_CXX_FLAGS "/MP /GF /Ox /Ob2 /Oi /Ot /GT /W1 ${CMAKE_CXX_FLAGS} /arch:SSE2" )
+	add_definitions(/W1)
+endif()
+endif(MSVC)
+
+if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm")
+		set ( CMAKE_CXX_FLAGS "-mfpu=neon-vfpv4 -mtune=cortex-a7 -mhard-float ${CMAKE_CXX_FLAGS}" )
+	elseif(CMAKE_SIZEOF_VOID_P EQUAL 4 AND NOT MSVC)
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse2")
+	endif()
+if(NOT MSVC)
+	if( CMAKE_CXX_COMPILER_ID STREQUAL "Clang" )
+		set ( CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}" )
+	else ()
+		set ( CMAKE_CXX_FLAGS "-std=gnu++11 ${CMAKE_CXX_FLAGS}" )
+endif()
+endif(NOT MSVC)
+
+if(CMAKE_BUILD_TOOL MATCHES "(msdev|devenv|nmake)")
+    add_definitions(/W1)
+endif()
+
+add_definitions(
+	#-DDEH_EDGE_PLUGIN
+	-DHAVE_PHYSFS
+	-DUSE_SDL
+	-D_GNU_SOURCE
+	#-DUSE_FFMPEG
+)
+
+# For the Hypertension team, we must continue using SSE2 and _not_ AVX, since not everyone has an AVX-compatible processor.
+if(HYPERTENSION)
+	add_definitions(
+		-DHYPERTENSION
+		-DSSE2
+	)
+endif(HYPERTENSION)
+
+# For the Daikatana team, we must continue using SSE2 and _not_ AVX, since not everyone has an AVX-compatible processor.
+if(DAIKATANA)
+	add_definitions(
+		-DDAIKATANA
+		-DSSE2
+	)
+endif(DAIKATANA)
+
+# Removed HAVE_STDINT_H on Visual Studio/Win32 machines (Caused problems, so I Shoved it into UNIX define)
+if(APPLE)
+	add_definitions(
+		-DMACOSX
+		-DHAVE_STDINT_H
+	)
+elseif(UNIX)
+	if(${CMAKE_SYSTEM_NAME} MATCHES "(Free|Open)BSD")
+		add_definitions(
+			-DBSD
+			-DHAVE_STDINT_H
+		)
+		else()
+			add_definitions(
+			-DLINUX
+			-DHAVE_STDINT_H
+		)
+	endif()
+endif()
+
+# Module Paths
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/modules)
+
+#message(${CMAKE_MODULE_PATH})
+
+# Gitinfo Puller thingy
+add_custom_target(revision_check ALL
+   COMMAND updaterevision src/gitinfo.h
+   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+   DEPENDS updaterevision
+)
+
+SET (BIN_DIR bin)
+SET (SHARE_DIR share/edge)
+IF (WIN32)
+        SET (LIB_DIR ${BIN_DIR})
+        SET (SHARE_DIR ${BIN_DIR})
+ELSE (WIN32)
+        SET (LIB_DIR lib)
+ENDIF (WIN32)
+
+################################################################################
+######################### Find Needed Libs #####################################
+
+# See /VSLibs/lib_versions.txt [libs have been compiled with MSVC 2017!]
+# CA: 11/30/18 - For MSVC, libs are no longer required to be downloaded seperately, they now exist in /libs/msvc/
+if (FORCE_STATIC_MSVC_LIBS)
+	if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+		set( SDL_NET_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/SDL_net-2.0.1/lib/x64/SDL2_net.lib" )
+		set( ogg_DEBUG_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libogg-1.3.3/lib/x64/libogg_staticd.lib" )
+		set( ogg_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libogg-1.3.3/include" )
+		set( ogg_RELEASE_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libogg-1.3.3/lib/x64/libogg_static.lib" )
+		set( vorbisFILE_DEBUG_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/lib/x64/libvorbisfile_static.lib" )
+		set( vorbisFILE_RELEASE_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/lib/x64/libvorbisfile_static.lib" )
+		set( vorbis_DEBUG_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/lib/x64/libvorbis_static.lib" )
+		set( vorbis_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/include" )
+		set( vorbis_RELEASE_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/lib/x64/libvorbis_static.lib" )
+	elseif(CMAKE_SIZEOF_VOID_P EQUAL 4)
+		set( SDL_NET_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/SDL_net-2.0.1/lib/x86/SDL2_net.lib" )
+		set( ogg_DEBUG_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libogg-1.3.3/lib/x86/libogg_staticd.lib" )
+		set( ogg_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libogg-1.3.3/include" )
+		set( ogg_RELEASE_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libogg-1.3.3/lib/x86/libogg_static.lib" )
+		set( vorbisFILE_DEBUG_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/lib/x86/libvorbisfile_staticd.lib" )
+		set( vorbisFILE_RELEASE_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/lib/x86/libvorbisfile_static.lib" )
+		set( vorbis_DEBUG_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/lib/x86/libvorbis_staticd.lib" )
+		set( vorbis_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/include" )
+		set( vorbis_RELEASE_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/libvorbis-1.3.6/lib/x86/libvorbis_static.lib" )
+		#set (kitchensink_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/kitchensink/include")
+		#set (kitchensink_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/kitchensink/lib/SDL_kitchensink_static.lib")
+	endif()
+		include("${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/SDL2/sdl-config.cmake")
+		set( SDL2_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/SDL2")
+		set( SDLNET_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs/msvc/SDL_net-2.0.1/include" )
+endif(FORCE_STATIC_MSVC_LIBS)
+
+if(UNIX)
+	if(APPLE)
+		set(ogg_RELEASE_LIBRARY "libvorbisfile.dylib" )
+	else(APPLE)
+		set(ogg_RELEASE_LIBRARY "libvorbisfile.so" )
+	endif(APPLE)
+		#set( PHYSFS_LIBRARY "libphysfs.so" )
+	#set(SDL2_INCLUDE_DIR /usr/include/SDL2)
+	#set(SDL2_LIBRARIES /usr/lib/libSDL2.so)
+	find_package(SDL2 REQUIRED)
+endif(UNIX)
+
+#INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/src ${SDL2_INCLUDE_DIRS})
+
+## SDL2
+#set(SDL2_PATH "${CMAKE_CURRENT_SOURCE_DIR/SDL2-2.0.9}" CACHE PATH “The location to search for SDL2”)
+INCLUDE_DIRECTORIES (${SDL2_INCLUDE_DIRS})
+
+INCLUDE_DIRECTORIES (${SDL2_MIXER_INCLUDE_DIRS})
+
+## FIND_PACKAGE (SDL_net REQUIRED)
+INCLUDE_DIRECTORIES (${SDLNET_INCLUDE_DIR})
+
+INCLUDE_DIRECTORIES (${PHYSFS_INCLUDE_DIR})
+
+#INCLUDE_DIRECTORIES (${FLTK_INCLUDE_DIR})
+
+## FIND FFMPEG AND KITCHENSINK INCLUDES
+##INCLUDE_DIRECTORIES (${FFMPEG_INCLUDE_DIR})
+##INCLUDE_DIRECTORIES (${SDLKitchensink_INCLUDE_DIRS})
+
+# OpenGL
+if (NOT VITA)
+FIND_PACKAGE (OpenGL)
+elseif(VITA)
+FIND_PACKAGE (VitaGL)
+endif()
+
+# libvorbis/libogg
+include_directories(
+	${ogg_INCLUDE_DIR}
+	${vorbis_INCLUDE_DIR}
+)
+
+# zlib
+#find_package(ZLIB REQUIRED)
+include_directories(${ZLIB_INCLUDE_DIR})
+
+# dumb
+#include_directories(${LIBDUMB_INCLUDE_DIR})
+
+# EDGE
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(EDGE_SOURCES
+	coal/c_compile.cc
+	coal/c_execute.cc
+	coal/c_memory.cc
+	
+	src/cin_actr.c
+	src/cin_efct.c
+	src/cin_evnt.c
+	src/cin_glob.c
+	src/cin_main.c
+	src/cin_util.c
+	src/dosutil.c
+	src/engine.c
+	src/isr.c
+	src/modexlib.c
+	src/rt_actor.c
+	src/rt_battl.c
+	src/rt_build.c
+	src/rt_cfg.c
+	src/rt_crc.c
+	src/rt_com.c
+	src/rt_debug.c
+	src/rt_dmand.c
+	src/rt_door.c
+	src/rt_draw.c
+	src/rt_floor.c
+	src/rt_game.c
+	src/rt_in.c
+	src/rt_main.c
+	src/rt_map.c
+	src/rt_menu.c
+	src/rt_msg.c
+	src/rt_net.c
+	src/rt_playr.c
+	src/rt_rand.c
+	src/rt_scale.c
+	src/rt_sound.c
+	src/rt_sqrt.c
+	src/rt_stat.c
+	src/rt_state.c
+	src/rt_str.c
+	src/rt_ted.c
+	src/rt_util.c
+	src/rt_view.c
+	src/rt_vid.c
+	src/rt_err.c
+	src/scriplib.c
+	src/w_wad.c
+	src/watcom.c
+	src/z_zone.c
+	src/byteordr.c
+	src/dukemusc.c
+	src/winrott.c
+	src/queue.c
+	src/HashTable.c
+
+	src/audiolib/audiolib.c
+
+	#src/utility/lib_file.cc
+	#src/utility/lib_util.cc
+	#src/utility/m_strings.cc
+
+	epi/arrays.cc
+	epi/bytearray.cc
+	epi/exe_path.cc
+	epi/file.cc
+	epi/filesystem.cc
+	epi/file_memory.cc
+	epi/file_sub.cc
+	epi/image_data.cc
+	epi/image_hq2x.cc
+	epi/image_jpeg.cc
+	epi/image_png.cc
+	epi/image_tga.cc
+	epi/stb_image.cc
+	epi/stb_image_write.cc
+	epi/math_angle.cc
+	epi/math_bbox.cc
+	epi/math_crc.cc
+	epi/math_md5.cc
+	epi/math_oddity.cc
+	epi/math_matrix.cc
+	epi/math_vector.cc
+	epi/math_quaternion.cc
+	epi/math_random.cc
+	epi/mersenne_twist.cc
+	epi/mus_2_midi.cc
+	epi/path.cc
+	epi/str_format.cc
+	epi/sound_data.cc
+	epi/sound_gather.cc
+	epi/sound_wav.cc
+	epi/timestamp.cc
+	epi/utility.cc
+
+)
+
+
+add_subdirectory( tools )
+
+add_executable(EDGE
+	${EDGE_SOURCES}
+)
+
+if (NOT VITA)
+add_dependencies( EDGE revision_check )
+endif()
+if(MSVC)
+	add_dependencies( EDGE eecrashreport )
+endif()
+
+#copy base folder to build root
+
+target_link_libraries(EDGE
+	${SDL2_LIBRARIES}
+	${SDL2_MIXER_LIBRARY}
+	${SDL_NET_LIBRARY}
+	Ogg::ogg
+	# Vorbis::vorbis Vorbis::vorbisenc Vorbis::vorbisfile
+	${VORBIS_LIBRARIES} ${VORBISFILE_LIBRARIES}
+	ZLIB::ZLIB
+	${PHYSFS_LIBRARY}
+	#   ${FLTK_LIBRARIES}
+	#	${LIBDUMB_LIBRARY}
+	#	${SDLKitchensink_STATIC_LIBRARY}
+)
+
+if (WIN32)
+	target_link_libraries(EDGE
+		wsock32
+		winmm
+		gdi32
+		opengl32
+	)
+elseif(APPLE)
+	target_link_libraries(EDGE SDL2)
+	set_target_properties(EDGE PROPERTIES LINK_FLAGS "-framework OpenGL -framework Cocoa -framework IOKit")
+elseif(VITA)
+	target_link_libraries(EDGE SDL2 vitaGL SceDisplay_stub SceCtrl_stub SceAudio_stub SceSysmodule_stub SceGxm_stub SceCommonDialog_stub SceTouch_stub SceHid_stub m)
+elseif(NOT ${CMAKE_SYSTEM_NAME} MATCHES "(Free|Open)BSD")
+	target_link_libraries(EDGE SDL2 GL dl)
+endif()
+
+#if(MSVC)
+#   target_link_libraries(EDGE rpcrt4)
+#endif()
+
+if (NOT VITA)
+INSTALL (TARGETS EDGE
+        RUNTIME DESTINATION ${BIN_DIR}
+        LIBRARY DESTINATION ${LIB_DIR}
+        ARCHIVE DESTINATION ${LIB_DIR})
+
+INSTALL (DIRECTORY ${CMAKE_SOURCE_DIR}/data/base
+        DESTINATION ${PROJECT_BINARY_DIR}
+        PATTERN "delete.me" EXCLUDE
+        PATTERN ".svn" EXCLUDE)
+elseif(VITA)
+vita_create_self(${PROJECT_NAME}.self ${PROJECT_NAME})
+vita_create_vpk(${PROJECT_NAME}.vpk ${VITA_TITLEID} ${PROJECT_NAME}.self
+  VERSION ${VITA_VERSION}
+  NAME ${VITA_APP_NAME}
+  FILE sce_sys/icon0.png sce_sys/icon0.png
+  FILE sce_sys/livearea/contents/bg.png sce_sys/livearea/contents/bg.png
+  FILE sce_sys/livearea/contents/startup.png sce_sys/livearea/contents/startup.png
+  FILE sce_sys/livearea/contents/template.xml sce_sys/livearea/contents/template.xml
+)
+endif()
+## EOF
+

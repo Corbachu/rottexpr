@@ -1,0 +1,4047 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C65237E1-7615-3C75-8AF4-D932FFCD7AF1}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>edge_epk</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\EDGE\CMakeFiles\58fa8f20b600ddd3d6d8512c755dff02\edge.epk.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ../edge.epk</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+..\zipdir\Debug\zipdir.exe -udf C:/EDGE/edge.epk C:/EDGE/wadsrc/static
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/EDGE/edge.epk C:/EDGE/Debug/edge.epk
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\EDGE\zipdir\Debug\zipdir.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\EDGE\edge.epk</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ../edge.epk</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+..\zipdir\Release\zipdir.exe -udf C:/EDGE/edge.epk C:/EDGE/wadsrc/static
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/EDGE/edge.epk C:/EDGE/Release/edge.epk
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\EDGE\zipdir\Release\zipdir.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\EDGE\edge.epk</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating ../edge.epk</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+..\zipdir\MinSizeRel\zipdir.exe -udf C:/EDGE/edge.epk C:/EDGE/wadsrc/static
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/EDGE/edge.epk C:/EDGE/MinSizeRel/edge.epk
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\EDGE\zipdir\MinSizeRel\zipdir.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\EDGE\edge.epk</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating ../edge.epk</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+..\zipdir\RelWithDebInfo\zipdir.exe -udf C:/EDGE/edge.epk C:/EDGE/wadsrc/static
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/EDGE/edge.epk C:/EDGE/RelWithDebInfo/edge.epk
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\EDGE\zipdir\RelWithDebInfo\zipdir.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\EDGE\edge.epk</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\EDGE\CMakeFiles\54bb9cbe456e1c0815d58e878791f0ba\edge_epk.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/EDGE/zipdir/Debug/zipdir.exe
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\EDGE\edge.epk;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\EDGE\wadsrc\CMakeFiles\edge_epk</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/EDGE/zipdir/Release/zipdir.exe
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\EDGE\edge.epk;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\EDGE\wadsrc\CMakeFiles\edge_epk</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/EDGE/zipdir/MinSizeRel/zipdir.exe
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\EDGE\edge.epk;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\EDGE\wadsrc\CMakeFiles\edge_epk</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/EDGE/zipdir/RelWithDebInfo/zipdir.exe
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\EDGE\edge.epk;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\EDGE\wadsrc\CMakeFiles\edge_epk</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\EDGE\wadsrc\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/EDGE/wadsrc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/EDGE -BC:/EDGE --check-stamp-file C:/EDGE/wadsrc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\EDGE\wadsrc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/EDGE/wadsrc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/EDGE -BC:/EDGE --check-stamp-file C:/EDGE/wadsrc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\EDGE\wadsrc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/EDGE/wadsrc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/EDGE -BC:/EDGE --check-stamp-file C:/EDGE/wadsrc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\EDGE\wadsrc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/EDGE/wadsrc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/EDGE -BC:/EDGE --check-stamp-file C:/EDGE/wadsrc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\EDGE\wadsrc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\automaps.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\fnwhtmap.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\lavamap.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\nitevmap.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\plyrmaps.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\sargmaps.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\shademap.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\skinmaps.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\slimemap.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\textmaps.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtblues.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtbrns1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtbrns2.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtgreys.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtgrns.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtorans.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtpnks1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtpnks2.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtpurps.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtreds.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtylws1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\txtylws2.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\colormaps\watermap.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\edgever.txt">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar01.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar02.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar03.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar04.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar05.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar06.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar07.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar08.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar09.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar10.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar11.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar12.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar13.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar14.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar15.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar16.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar17.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar18.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar19.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar20.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\airbar21.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar01.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar02.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar03.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar04.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar05.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar06.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar07.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar08.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar09.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar10.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar11.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar12.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar13.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar14.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar15.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar16.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar17.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar18.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar19.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\powbar20.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\sttpowr1.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\sttpowr2.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\sttpowr3.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\sttpowr4.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\sttpowr5.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\ceejay\sttpowr6.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\sbohealt.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\stkeys6.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\stkeys7.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\HUD\stkeys8.gfx">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\XHAIR\crosshr1.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\XHAIR\crosshr2.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\XHAIR\crosshr3.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\XHAIR\crosshr4.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\XHAIR\crosshr5.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\XHAIR\crosshr6.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\XHAIR\crosshr7.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\XHAIR\crosshr8.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\XHAIR\crosshr9.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\graphics\console\LOGO">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\console\LOGO.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\console\confont2.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\console\consol_p.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn033.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn034.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn035.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn036.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn037.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn038.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn039.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn040.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn041.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn042.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn043.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn044.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn045.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn046.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn047.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn048.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn049.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn050.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn051.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn052.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn053.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn054.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn055.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn056.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn057.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn058.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn059.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn060.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn061.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn062.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn063.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn064.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn065.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn066.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn067.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn068.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn069.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn070.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn071.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn072.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn073.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn074.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn075.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn076.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn077.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn078.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn079.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn080.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn081.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn082.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn083.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn084.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn085.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn086.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn087.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn088.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn089.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn090.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn091.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn092.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn093.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn094.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn095.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\Menu\menfn121.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stcfn000.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stcfn132.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stcfn134.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stcfn148.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgncoma.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum1.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum2.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum3.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum4.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum5.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum6.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum7.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum8.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stgnum9.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmcoma.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum1.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum2.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum3.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum4.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum5.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum6.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum7.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum8.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\fonts\misc\stsmnum9.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_contrl.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_epi1.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_epi2.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_epi3.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_epi4.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_epi5.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_episod.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_fslot.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_gamepl(1).gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_gamepl.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_gamfil.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_hostng.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_hurt.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_jkill.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_joinng.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_loadg.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_msettl(1).gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_msettl.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_multi.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_ngame.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_nmare.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_option.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_quitg.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_rdthis.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_rough.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_saveg.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_scropt.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_setres.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_sfxopt.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_sndopt.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_therml.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_thermm.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_thermo.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_thermr.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_ultra.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\heretic\h_video.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_2playr.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_connec.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_contrl.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_epi4.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_epi6.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_epi7.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_epi8.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_gamepl.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_hostng.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_joinng.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_msettl.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_multi.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_scropt.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_setres.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_setupa.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_setupb.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_setupm.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_sfxopt.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_stserv.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\menu\m_video.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\rott\MMBKD.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\rott\PLANE2.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\rott\TNGAME.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\rott\TQUITG.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\rott\TRI2.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\rott\rt_pause.lmp">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\dlitexpn.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\fuzzmap8.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\mouse.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stfb0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stfb1.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stfb2.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stfb3.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stfb4.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stfb5.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stfb6.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stfb7.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stpb0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stpb1.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stpb2.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stpb3.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stpb4.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stpb5.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stpb6.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\multiplayer\stpb7.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\null.gfx">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\portal7a.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\portal7b.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\portal7c.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\portal7d.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\portal7e.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\portal7f.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\portal7g.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\system\shadowst.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\graphics\system\stdesync.gfx">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\graphics\titles\EDGETTL.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\graphics\titles\credit2.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\titles\doomintr.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\graphics\titles\interpcx.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\music\O_EDGTTL">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\music\O_EDGTTL.ogg">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\ROTTCOLORS.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\ROTTPAL.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\RT_DMXGUSC.txt">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\RT_GENMIDI">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\RT_GENMIDI.lmp">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\rott\RT_SHADOWST.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\RT_SKYDK1.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\PISGA0.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\PISGB0.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\PISGC0.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\XHAIR\crosshr1.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\XHAIR\crosshr2.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\XHAIR\crosshr3.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\XHAIR\crosshr4.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\XHAIR\crosshr5.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\XHAIR\crosshr6.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\XHAIR\crosshr7.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\XHAIR\crosshr8.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\XHAIR\crosshr9.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\console\LOGO">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\console\LOGO.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\console\confont2.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\console\consol_p.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\BIGFONT.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\CONFONT.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\DBIGFONT.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\ifntfont\IFNTF098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF099.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF100.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\itnyfont\ITNYF101.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\lifont\LIFON098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\newfnt1\ROTFN098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\sifont\SIFON098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\smallfon\SMALL098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF099.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF100.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\fonts\tinyfont\TINYF101.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\menu\M_PAUSE.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\menu\TNGAME.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\menu\TQUITG.lmp">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\dlitexpn.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\fuzzmap8.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\mouse.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stfb0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stfb1.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stfb2.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stfb3.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stfb4.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stfb5.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stfb6.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stfb7.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stpb0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stpb1.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stpb2.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stpb3.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stpb4.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stpb5.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stpb6.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\multiplayer\stpb7.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\null.gfx">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\portal7a.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\portal7b.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\portal7c.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\portal7d.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\portal7e.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\portal7f.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\portal7g.jpg">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\graphics\system\shadowst.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\rott\graphics\system\stdesync.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\maps\E1M1.wad">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\maps\MAP01.wad">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\MMBKD.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\PLANE2.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\RT_PAUSE.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\TNGAME.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\TQUITG.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\TRI2.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\BIGFONT.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\DBIGFONT.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\RT_CONFONT.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\ifntfont\IFNTF098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF099.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF100.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\itnyfont\ITNYF101.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\lifont\LIFON098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\newfnt1\ROTFN098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\sifont\SIFON098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\smallfon\SMALL098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF001.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF002.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF003.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF004.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF005.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF006.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF007.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF008.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF009.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF010.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF011.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF012.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF013.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF014.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF015.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF016.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF017.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF018.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF019.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF020.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF021.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF022.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF023.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF024.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF025.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF026.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF027.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF028.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF029.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF030.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF031.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF032.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF033.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF034.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF035.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF036.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF037.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF038.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF039.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF040.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF041.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF042.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF043.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF044.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF045.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF046.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF047.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF048.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF049.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF050.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF051.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF052.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF053.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF054.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF055.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF056.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF057.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF058.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF059.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF060.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF061.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF062.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF063.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF064.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF065.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF066.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF067.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF068.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF069.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF070.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF071.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF072.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF073.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF074.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF075.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF076.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF077.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF078.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF079.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF080.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF081.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF082.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF083.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF084.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF085.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF086.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF087.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF088.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF089.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF090.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF091.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF092.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF093.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF094.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF095.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF096.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF097.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF098.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF099.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF100.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\fonts\tinyfont\TINYF101.raw">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\patches\s3dummy.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\dscrush.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\dssecret.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\jetpack_sfx\dsjpdown.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\jetpack_sfx\dsjpflow.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\jetpack_sfx\dsjpidle.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\jetpack_sfx\dsjpmove.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\jetpack_sfx\dsjprise.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\lockdoor_sfx\LOCKED1.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\lockdoor_sfx\LOCKED2.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\lockdoor_sfx\LOCKED3.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\teleport_sfx\TELEPT2.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\teleport_sfx\TELEPT3.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\teleport_sfx\TELEPT4.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\teleport_sfx\TELEPT5.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\teleport_sfx\TELEPT6.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\sounds\terrain_sfx\dsgloop.wav">
+    </None>
+    <Image Include="C:\EDGE\wadsrc\static\rott\sprites\FMPSA0.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\sprites\FMPSB0.png">
+    </Image>
+    <Image Include="C:\EDGE\wadsrc\static\rott\sprites\FMPSC0.png">
+    </Image>
+    <None Include="C:\EDGE\wadsrc\static\rott\textures\RTSKY1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\rott\textures\RT_SKY1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\scripts\coal_template.txt">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\scripts\kissme.txt">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\scripts\plutgame.txt">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\scripts\plutlang.txt">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\scripts\tntgame.txt">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\scripts\tntlang.txt">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\bloomcombine.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\bloomextract.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\burn.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\depthblur.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\exposureaverage.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\exposurecombine.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\exposureextract.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\fogboundary.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\func_brightmap.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\func_defaultlight.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\func_normal.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\func_notexture.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\func_warp1.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\func_warp2.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\func_warp3.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\func_wavex.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\fxaa.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\lensdistortion.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\lineardepth.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\main.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\main.vp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\screenquad.vp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\screenquadscale.vp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\shaderdefs.i">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\ssao.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\ssaocombine.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\stencil.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\shaders\glsl\tonemap.fp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHA1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHA2C8.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHA3C7.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHA4C6.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHA5.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHB1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHB2D8.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHB3D7.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHB4D6.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHB5.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHC1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHC2A8.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHC3A7.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHC4A6.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHC5.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHD1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHD2B8.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHD3B7.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHD4B6.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHD5.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHE1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHE2E8.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHE3E7.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHE4E6.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHE5.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHF1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHF2F8.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHF3F7.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHF4F6.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHF5.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHG1.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHG2G8.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHG3G7.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHG4G6.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHG5.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHH0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHI0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHJ0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHK0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHL0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHM0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHN0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHO0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHP0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHQ0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHR0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHS0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHT0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHU0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHV0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\CRSHW0.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\skins\SKININFO.txt">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\dscrush.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\dssecret.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\jetpack_sfx\dsjpdown.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\jetpack_sfx\dsjpflow.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\jetpack_sfx\dsjpidle.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\jetpack_sfx\dsjpmove.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\jetpack_sfx\dsjprise.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\lockdoor_sfx\LOCKED1.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\lockdoor_sfx\LOCKED2.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\lockdoor_sfx\LOCKED3.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\player2_sfx\DSIDETH.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\player2_sfx\DSIDIEHI.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\player2_sfx\DSINOWAY.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\player2_sfx\DSIOOF.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\player2_sfx\DSIPAIN.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\player2_sfx\DSITAUNT.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\teleport_sfx\TELEPT2.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\teleport_sfx\TELEPT3.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\teleport_sfx\TELEPT4.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\teleport_sfx\TELEPT5.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\teleport_sfx\TELEPT6.WAV">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sounds\terrain_sfx\dsgloop.wav">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sprites\jpcka0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sprites\jpckb0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sprites\jpckc0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sprites\nvsca0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sprites\nvscb0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sprites\stima0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sprites\stimb0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\sprites\stimc0.gfx">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\video\intro.roq">
+    </None>
+    <None Include="C:\EDGE\wadsrc\static\wolf3d\PLAYPAL.lmp">
+    </None>
+    <None Include="C:\EDGE\wadsrc\CMakeFiles\edge_epk">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\EDGE\ZERO_CHECK.vcxproj">
+      <Project>{A4B73C2E-E5D5-3597-BFEA-902D791BD120}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\EDGE\EDGE.vcxproj">
+      <Project>{458C7AA4-C365-33AE-8656-B7ED2BDFBEDD}</Project>
+      <Name>EDGE</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\EDGE\zipdir\zipdir.vcxproj">
+      <Project>{C3FD19CE-1C5B-327C-88EC-01FAA90FCEBD}</Project>
+      <Name>zipdir</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
