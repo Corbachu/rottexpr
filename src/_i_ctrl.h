@@ -17,12 +17,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 //****************************************************************************
 //
-// Private header for RT_IN.C
+// Private header for i_ctrl.C
 //
 //****************************************************************************
 
-#ifndef _rt_in_private
-#define _rt_in_private
+#ifndef _i_ctrl_private
+#define _i_ctrl_private
 
 
 //****************************************************************************

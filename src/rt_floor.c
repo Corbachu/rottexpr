@@ -34,7 +34,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "rt_actor.h"
 #include <string.h>
 #include "isr.h"
-#include "modexlib.h"
+#include "i_video.h"
 #include "rt_playr.h"
 #include "rt_sound.h"
 #include "rt_rand.h"

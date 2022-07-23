@@ -25,7 +25,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <SDL2/SDL_video.h>
-#include "modexlib.h"
+#include "i_video.h"
 #include "rt_util.h"
 #include "rt_net.h" // for GamePaused
 #include "myprint.h"

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "WinRott.h"
-#include "modexlib.h"
+#include "i_video.h"
 
 //typedef unsigned char byte;
 

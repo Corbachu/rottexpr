@@ -49,7 +49,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "isr.h"
 #include "rt_com.h"
 #include "rt_scale.h"
-#include "modexlib.h"
+#include "i_video.h"
 #include "rt_net.h"
 #include "rt_msg.h"
 #include "fx_man.h"

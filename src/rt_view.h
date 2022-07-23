@@ -23,7 +23,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef _rt_view_public
 #define _rt_view_public
 
-#include "modexlib.h"
+#include "i_video.h"
 
 #define HEIGHTFRACTION 6
 #define MAXVIEWSIZES   11

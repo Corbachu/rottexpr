@@ -17,12 +17,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 //***************************************************************************
 //
-// Public header for RT_IN.C.
+// Public header for i_ctrl.C.
 //
 //***************************************************************************
 
-#ifndef _rt_in_public
-#define _rt_in_public
+#ifndef _i_ctrl_public
+#define _i_ctrl_public
 
 #include "develop.h"
 #include "rottnet.h"

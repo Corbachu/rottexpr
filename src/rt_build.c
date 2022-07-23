@@ -41,7 +41,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "rt_vid.h"
 
 #include "rt_sound.h"
-#include "modexlib.h"
+#include "i_video.h"
 #include "rt_str.h"
 
 byte * intensitytable;

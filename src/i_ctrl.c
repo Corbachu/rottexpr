@@ -28,8 +28,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #include "rt_main.h"
 #include "rt_def.h"
-#include "rt_in.h"
-#include "_rt_in.h"
+#include "i_ctrl.h"
+#include "_i_ctrl.h"
 #include "isr.h"
 #include "rt_util.h"
 #include "rt_vh_a.h"
@@ -41,7 +41,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "rt_cfg.h"
 #include "keyb.h"
 #include "HashTable.h"
-#include "modexlib.h"
+#include "i_video.h"
 
 #define MAXMESSAGELENGTH      (COM_MAXTEXTSTRINGLENGTH-1)
 

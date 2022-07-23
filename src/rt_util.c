@@ -38,7 +38,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "isr.h"
 #include "z_zone.h"
 #include "rt_dr_a.h"
-#include "rt_in.h"
+#include "i_ctrl.h"
 #include "rt_main.h"
 #include "scriplib.h"
 #include "rt_menu.h"
@@ -47,7 +47,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "develop.h"
 #include "rt_vid.h"
 #include "rt_view.h"
-#include "modexlib.h"
+#include "i_video.h"
 #include "rt_cfg.h"
 
 int    egacolor[16];

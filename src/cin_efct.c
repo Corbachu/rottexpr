@@ -27,7 +27,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "z_zone.h"
 #include <string.h>
 
-#include "modexlib.h"
+#include "i_video.h"
 
 static int cin_sprtopoffset;
 static int cin_invscale;

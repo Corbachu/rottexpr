@@ -17,12 +17,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 //***************************************************************************
 //
-//    MODEXLIB.C - various utils palette funcs and modex stuff
+//    i_video.C - various utils palette funcs and modex stuff
 //
 //***************************************************************************
 
-#ifndef _modexlib_public
-#define _modexlib_public
+#ifndef _i_video_public
+#define _i_video_public
 
 #include "WinRott.h"
 #include "rt_def.h"

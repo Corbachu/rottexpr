@@ -40,7 +40,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "rt_playr.h"
 #include "rt_menu.h"
 #include "rt_game.h"
-#include "rt_in.h"
+#include "i_ctrl.h"
 #include "z_zone.h"
 #include "w_wad.h"
 #include "rt_crc.h"

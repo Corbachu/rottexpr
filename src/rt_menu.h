@@ -25,7 +25,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //******************************************************************************
 
 #include "lumpy.h"
-#include "rt_in.h"
+#include "i_ctrl.h"
 
 #define MaxX            320
 #define MaxY            200

@@ -25,7 +25,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "_rt_com.h"
 #include "rt_com.h"
 #include "rt_util.h"
-#include "rt_in.h"
+#include "i_ctrl.h"
 #include "rt_crc.h"
 #include "rt_playr.h"
 #include "isr.h"

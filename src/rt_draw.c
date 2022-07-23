@@ -51,7 +51,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "develop.h"
 #include "rt_sound.h"
 #include "rt_msg.h"
-#include "modexlib.h"
+#include "i_video.h"
 #include "rt_rand.h"
 #include "rt_net.h"
 #include "rt_sc_a.h"
@@ -2590,7 +2590,7 @@ void FlipPage ( void )
 
     /* TODO some shake thing */
 
-    /* just call the one in modexlib.c */
+    /* just call the one in i_video.c */
     XFlipPage();
 }
 

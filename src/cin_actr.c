@@ -20,7 +20,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "cin_def.h"
 #include "cin_actr.h"
 #include "cin_efct.h"
-#include "modexlib.h"
+#include "i_video.h"
 
 actortype * firstcinematicactor;
 actortype * lastcinematicactor;

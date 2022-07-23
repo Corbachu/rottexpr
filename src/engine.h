@@ -18,7 +18,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #ifndef _engine_public
 #define _engine_public
 
-#include "modexlib.h"
+#include "i_video.h"
 //***************************************************************************
 //
 // ENGINE.C

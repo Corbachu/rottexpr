@@ -16,7 +16,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 #include "cin_glob.h"
-#include "rt_in.h"
+#include "i_ctrl.h"
 #include "rt_draw.h"
 
 void CinematicDelay ( void )

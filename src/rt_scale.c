@@ -19,7 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "watcom.h"
 #include <stdio.h>
 #include <string.h>
-#include "modexlib.h"
+#include "i_video.h"
 #include "rt_util.h"
 #include "rt_draw.h"
 #include "rt_scale.h"

@@ -49,7 +49,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "rt_rand.h"
 #include "rt_cfg.h"
 #include "develop.h"
-#include "modexlib.h"
+#include "i_video.h"
 #include "engine.h"
 #include "rt_debug.h"
 #include "rt_scale.h"

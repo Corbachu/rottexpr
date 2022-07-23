@@ -35,7 +35,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "rt_menu.h"
 #include "rt_view.h"
 #include "rt_com.h"
-#include "rt_in.h"
+#include "i_ctrl.h"
 #include "rt_util.h"
 #include "rt_game.h"
 #include "rt_rand.h"

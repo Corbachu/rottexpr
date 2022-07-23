@@ -26,7 +26,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "z_zone.h"
 #include "w_wad.h"
 #include "cin_main.h"
-#include "modexlib.h"
+#include "i_video.h"
 #include "lumpy.h"
 
 #include "cin_actr.h"

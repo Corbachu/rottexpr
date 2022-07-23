@@ -27,7 +27,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "rt_main.h"
 #include "rt_util.h"
 #include "rt_draw.h"
-#include "rt_in.h"
+#include "i_ctrl.h"
 #include "z_zone.h"
 #include "rt_ted.h"
 #include "rt_view.h"
