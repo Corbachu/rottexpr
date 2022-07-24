@@ -74,13 +74,14 @@ option(FORCE_STATIC_MSVC_LIBS "Use pre-build via ./libs" OFF)
 option(FORCE_INTERNAL_ZLIB "Use internal zlib")
 option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
 option(FORCE_INTERNAL_PHYSFS "Use internal physfs")
+option(FORCE_INTERNAL_SDL2_mixer "Use internal SDL2_mixer")
 option(HYPERTENSION "Compile Hypertension Executable" OFF)
 
 find_package( ZLIB )
 find_package( BZip2 )
 find_package ( PhysFS )
 find_package(SDL2 REQUIRED)
-find_package(SDL2_MIXER REQUIRED)
+find_package(SDL2_mixer REQUIRED)
 find_package(Ogg CONFIG REQUIRED)
 find_package(Vorbis REQUIRED)
 #find_package ( libdumb )
@@ -90,14 +91,14 @@ find_package(Vorbis REQUIRED)
 #set (SDL_kitchensink_static "Statically link SDLKitchensink" ON)
 #set (SDL_kitchensink "Do not Statically link SDLKitchensink" OFF)
 
-if(NOT SDL2_MIXER_FOUND OR INTERNAL_SDL2_MIXER)
+if(NOT SDL2_mixer_FOUND OR INTERNAL_SDL2_mixer)
 	message(STATUS "Using internal SDL2-MIXER")
-	set(SDL2_MIXER_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/deps/SDL_Mixer/include)
+	set(SDL2_mixer_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/deps/SDL_Mixer/include)
 	add_subdirectory(deps/SDL_Mixer)
-	set(SDL2_MIXER_LIBRARIES sdl_mixer)
-	set(SDL2_MIXER_LIBRARY sdl_mixer)
+	set(SDL2_mixer_LIBRARIES SDL_mixer)
+	set(SDL2_mixer_LIBRARY SDL_mixer)
 else()
-	message(STATUS "Using system SDL2_MIXER, includes found at ${SDL2_MIXER_INCLUDE_DIR}")
+	message(STATUS "Using system SDL2_mixer, includes found at ${SDL2_mixer_INCLUDE_DIR}")
 endif()
 
 if(NOT ZLIB_FOUND OR INTERNAL_ZLIB)
@@ -384,7 +385,7 @@ endif(UNIX)
 #set(SDL2_PATH "${CMAKE_CURRENT_SOURCE_DIR/SDL2-2.0.9}" CACHE PATH “The location to search for SDL2”)
 INCLUDE_DIRECTORIES (${SDL2_INCLUDE_DIRS})
 
-INCLUDE_DIRECTORIES (${SDL2_MIXER_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES (${SDL2_mixer_INCLUDE_DIRS})
 
 ## FIND_PACKAGE (SDL_net REQUIRED)
 INCLUDE_DIRECTORIES (${SDLNET_INCLUDE_DIR})
@@ -433,7 +434,7 @@ set(EDGE_SOURCES
 	src/dosutil.c
 	src/engine.c
 	src/isr.c
-	src/modexlib.c
+	src/i_video.c
 	src/rt_actor.c
 	src/rt_battl.c
 	src/rt_build.c
@@ -446,7 +447,7 @@ set(EDGE_SOURCES
 	src/rt_draw.c
 	src/rt_floor.c
 	src/rt_game.c
-	src/rt_in.c
+	src/i_ctrl.c
 	src/rt_main.c
 	src/rt_map.c
 	src/rt_menu.c
@@ -468,7 +469,7 @@ set(EDGE_SOURCES
 	src/scriplib.c
 	src/w_wad.c
 	src/watcom.c
-	src/z_zone.c
+	src/z_zone.cc
 	src/byteordr.c
 	src/dukemusc.c
 	src/winrott.c
@@ -502,6 +503,7 @@ set(EDGE_SOURCES
 	epi/math_oddity.cc
 	epi/math_matrix.cc
 	epi/math_vector.cc
+	epi/math_vector.cc
 	epi/math_quaternion.cc
 	epi/math_random.cc
 	epi/mersenne_twist.cc
@@ -534,7 +536,7 @@ endif()
 
 target_link_libraries(EDGE
 	${SDL2_LIBRARIES}
-	${SDL2_MIXER_LIBRARY}
+	${SDL2_mixer_LIBRARY}
 	${SDL_NET_LIBRARY}
 	Ogg::ogg
 	# Vorbis::vorbis Vorbis::vorbisenc Vorbis::vorbisfile
