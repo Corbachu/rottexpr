@@ -7,8 +7,8 @@ Welcome to EDGEROTT!
 
 #### EDGE is an advanced OpenGL source port spawned from the DOOM engine, with focus on easy development and expansion for modders and end-users.
 
-# (C) 1999-2021 The EDGE Team & [Contributors](https://github.com/3dfxdev/hyper3DGE/blob/master/AUTHORS.md)
-# (C) 2021 LTCHIPS and the rottexpr Team
+# (C) 1999-2022 The EDGE Team & [Contributors](https://github.com/3dfxdev/hyper3DGE/blob/master/AUTHORS.md)
+# (C) 2022 LTCHIPS and the rottexpr Team
 ##### Uses GPL-licensed technology from id Tech 1-4 (C) 1997-2011 id Software, LLC
 ##### Uses GPL-licensed technology from Rise of the Triad (C) 1995-2002 Apogee Software
 ##### DOSDoom originally developed by Chi Hoang and the DOSDoom Team, (C) 1997-1999
@@ -21,9 +21,20 @@ community and the various projects for the engine.
 * The [EDGEWiki](http://3dfxdev.net/edgewiki) is also a great resource for
 editing documentation and other information related to the engine.
 
-(C) 1999 - 2021 [Isotope SoftWorks](https://www.facebook.com/IsotopeSoftWorks/) and Contributors (The EDGE Team). All Rights Reserved.
+(C) 1999 - 2022 [Isotope SoftWorks](https://www.facebook.com/IsotopeSoftWorks/) and Contributors (The EDGE Team). All Rights Reserved.
 
 ---
+
+# Currently In-Progress
+
+* Remove Makefile support, use CMake instead
+* Total refactor of code, to follow EDGE conventions (file renames to better organize code, merge/removal of unused files, swap places/names of many functions)
+* Convert codebase to C++ (98/2011 at least), and completely get rid of the wonky "private" headers (prefixed with _)
+* Remove/strip/convert many local functions to use EPI backend instead
+
+# Goals
+* RENDERER: Convert rendering/SDL2 code to OpenGL-only
+* MODS: Update WAD code to EDGE, and using physfs, enable archive support for EPK/PK3 for mods and main EDGE.epk data (following EDGE EPK standards)
 
 # rottexpr Readme
 Based off of the icculus Rise of the Triad source port
