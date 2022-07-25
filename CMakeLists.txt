@@ -82,8 +82,8 @@ find_package( BZip2 )
 find_package ( PhysFS )
 find_package(SDL2 REQUIRED)
 find_package(SDL2_mixer REQUIRED)
-find_package(Ogg CONFIG REQUIRED)
-find_package(Vorbis REQUIRED)
+#find_package(Ogg CONFIG REQUIRED)
+#find_package(Vorbis REQUIRED)
 #find_package ( libdumb )
 
 #find_package ( FFMPEG )
@@ -406,10 +406,10 @@ FIND_PACKAGE (VitaGL)
 endif()
 
 # libvorbis/libogg
-include_directories(
-	${ogg_INCLUDE_DIR}
-	${vorbis_INCLUDE_DIR}
-)
+#include_directories(
+#	${ogg_INCLUDE_DIR}
+#	${vorbis_INCLUDE_DIR}
+#)
 
 # zlib
 #find_package(ZLIB REQUIRED)
@@ -476,7 +476,16 @@ set(EDGE_SOURCES
 	src/queue.c
 	src/HashTable.c
 
-	src/audiolib/audiolib.c
+	src/audiolib/fx_man.c
+	src/audiolib/dsl.c
+	src/audiolib/ll_man.c
+	src/audiolib/multivoc.c
+	src/audiolib/mv_mix.c
+	src/audiolib/mvreverb.c
+	src/audiolib/nodpmi.c
+	src/audiolib/pitch.c
+	src/audiolib/user.c
+	src/audiolib/usrhooks.c
 
 	#src/utility/lib_file.cc
 	#src/utility/lib_util.cc
@@ -538,7 +547,7 @@ target_link_libraries(EDGE
 	${SDL2_LIBRARIES}
 	${SDL2_mixer_LIBRARY}
 	${SDL_NET_LIBRARY}
-	Ogg::ogg
+	#Ogg::ogg
 	# Vorbis::vorbis Vorbis::vorbisenc Vorbis::vorbisfile
 	${VORBIS_LIBRARIES} ${VORBISFILE_LIBRARIES}
 	ZLIB::ZLIB
